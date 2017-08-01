@@ -2,17 +2,17 @@ package com.pet.discovery;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.SpringApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * Discovery service
  * @author Igor Kryvenko
  */
 @EnableEurekaServer
-@EnableDiscoveryClient
 @SpringBootApplication
 public class DiscoveryApplication {
   public static void main(String[] args) {
-
-    SpringApplicaiton.run(DiscoveryApplication.class);
+    SpringApplication.run(DiscoveryApplication.class,args);
   }
 }
